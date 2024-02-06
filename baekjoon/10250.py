@@ -10,6 +10,7 @@ for i in range(M):
     Y = N % H
     if Y == 0:
         Y = H
+        X -= 1
     Y = str(Y)
     if X < 10:
         X = "0" + str(X)

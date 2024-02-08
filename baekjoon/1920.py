@@ -17,7 +17,7 @@ for i in range(M):
         if (M_list[i][0] > N_list[N_index]):
             N_index += 1
         elif (M_list[i][0] < N_list[N_index]):
-            break
+            break       
             
 M_list = sorted(M_list, key = lambda x : x[1])
 for m in M_list:

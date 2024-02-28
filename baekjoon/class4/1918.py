@@ -26,9 +26,7 @@ for chr in notations:
             x = stack.pop()
     else:
         answer.append(chr)
-    print(answer)
-    print(stack)
-
+        
 while stack:
     answer.append(stack.pop())
     

@@ -1,1 +1,1 @@
-print(68 / 132)
+print(type(range(4)))

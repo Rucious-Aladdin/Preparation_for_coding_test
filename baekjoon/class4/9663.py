@@ -20,6 +20,7 @@ def nqueen(order):
             pos[order] = i
             if check(pos, order):
                 nqueen(order + 1)
+        #pos[order] = 0
 
 nqueen(0)
 print(count)

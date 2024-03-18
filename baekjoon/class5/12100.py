@@ -113,7 +113,7 @@ def get_next_board(states, direction):
 
 def get_max(states, order):
     global max_val
-    if order == 5:
+    if order == 3:
         temp_max = 0
         for row in states:
             row_max = max(row)
@@ -125,23 +125,23 @@ def get_max(states, order):
     else:
         for i in range(4):
             states_copy = copy.deepcopy(states)
-            """
+            print("current order %d" % order)
             print("previous state")
             for state in states_copy:
                 for s in state:
                     print("%3d" % s, end = " ")
                 print()
             print()
-            """
+            
             states_1 = get_next_board(states_copy, i)
-            """
+            
             print("next state, direction: %d" % i)
             for state in states_1:
                 for s in state:
                     print("%3d" % s, end = " ")
                 print()
             print()
-            """
+            
             get_max(states_1, order + 1)
         
     return

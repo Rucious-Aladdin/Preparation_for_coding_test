@@ -8,6 +8,8 @@ maps = []
 for i in range(N):
     row = list(map(int, input().split()))
     maps.append(row)
+for i in range(N):
+    print(*maps[i])
 # 반복수행을 위한 map 생성
 index_lists = []
 # 첫 시작위치 생성
@@ -33,14 +35,24 @@ def bfs(maps, starts):
                 if maps[adj_x][adj_y] == 0:
                     maps[adj_x][adj_y] = 2
                     q.append((adj_x, adj_y))
+        print()
+        for i in range(N):
+            print(temp_maps[i])
 
 # 각 맵의 크기에 따라 3개의 벽을 선택 후 모든 경우에 대해 수행
 max_area = 0
+count = 0
 for walls in combinations(index_lists, 3):
+    count += 1
+    if count == 2:
+        break
     temp_maps = copy.deepcopy(maps)
     for wall in walls:
         temp_maps[wall[0]][wall[1]] = 1
     bfs(temp_maps, starts)
+    print()
+    for i in range(N):
+        print(temp_maps[i])
     area = 0
     for i in range(N):
         for j in range(M):

@@ -89,3 +89,10 @@ dfs(maps=boards, pos=0, count=0, starts=s_black)
 answer += max_count
 
 print(answer)
+
+"""
+백트래킹 문제중에 좀 어려운 편에 속하는 문제.
+백과 흑의 비숍은 서로 계산할 필요가 없다는 점까지 이용해야 풀 수 있었다.
+또한, count 를 계산위치에 대한 실수가 있었는데, check하고 난뒤에 항상 count를 하는 식으로 써야 정답이 되는 문제.
+
+"""
